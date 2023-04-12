@@ -96,7 +96,7 @@ function watchFiles() {
   gulp.watch(['src/**/*.scss'], css);
   gulp.watch(['src/**/*.js'], js);
   gulp.watch(['src/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}'], images);
-  gulp.watch(['src/video/*.mp4'], fonts);
+  gulp.watch(['src/fonts/*.woff2'], fonts);
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));

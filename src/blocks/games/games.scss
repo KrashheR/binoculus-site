@@ -1,0 +1,68 @@
+.games {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media (max-width: $screen-m) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description-title {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  &__description {
+    padding-right: 10px;
+
+    @media (max-width: $screen-m) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__description-text {
+    line-height: 18px;
+    margin-bottom: 24px;
+  }
+
+  &__description-link {
+    display: inline-block;
+    padding: 14px 12px;
+    width: 225px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: $screen-m) {
+      align-self: center;
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: $screen-l) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: $screen-m) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    padding: 20px;
+  }
+}

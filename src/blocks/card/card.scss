@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
+
+  &__image {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $black-text-color;
+    
+    &_accessories {
+      min-height: 55px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin-top: auto;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &_accessories {
+      padding: 5px;
+      border: 1px solid transparent;
+      border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    color: $black-text-color;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

@@ -13,6 +13,7 @@ const rigger = require('gulp-rigger');
 const concat = require('gulp-concat');
 const webp = require('gulp-webp');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 function serve() {
   browserSync.init({
@@ -99,8 +100,14 @@ function watchFiles() {
   gulp.watch(['src/fonts/*.woff2'], fonts);
 }
 
+function deploy() {
+  return src("./dist/**/*")
+    .pipe(ghPages());
+}
+
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
+
 
 exports.fonts = fonts;
 exports.html = html;
@@ -111,3 +118,4 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
+exports.deploy = deploy;

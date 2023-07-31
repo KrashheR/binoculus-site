@@ -100,14 +100,14 @@ function watchFiles() {
   gulp.watch(['src/fonts/*.woff2'], fonts);
 }
 
-function deploy() {
+function deployGhPages() {
   return src("./dist/**/*")
     .pipe(ghPages());
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
-
+const deploy = gulp.series(build, deployGhPages);
 
 exports.fonts = fonts;
 exports.html = html;

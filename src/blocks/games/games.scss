@@ -29,24 +29,6 @@
     margin-bottom: 24px;
   }
 
-  &__description-link {
-    display: inline-block;
-    padding: 14px 12px;
-    width: 225px;
-    border: 1px solid transparent;
-    border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    @media (max-width: $screen-m) {
-      align-self: center;
-    }
-  }
-
   &__grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -1,7 +1,8 @@
-const addToCard = document.querySelectorAll('.add-to-card');
-const navigationBasketNumber = document.querySelector('.navigation__basket-number');
+const addToCart = document.querySelectorAll('.add-to-cart');
 
 addToCard.forEach((item) => {
+  const navigationBasketNumber = document.querySelector('.navigation__basket-number');
+
   item.addEventListener('click', () => {
     const currentNumber = Number(navigationBasketNumber.innerHTML);
     if (currentNumber === 0) {

@@ -1,0 +1,123 @@
+.cart {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+
+  &_visible{
+    display: block;
+  }
+
+  &__title{
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    background: #fff;
+  }
+
+  &__list{
+    padding: 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-areas:
+      "img name quantity price";
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    padding: 10px 0;
+    grid-gap: 10px;
+  }
+
+  &__item-img {
+    grid-area: img;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+  }
+
+  &__item-name {
+    grid-area: name;
+    font-size: 16px;
+  }
+
+  &__item-quantity {
+    grid-area: quantity;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__quantity-button{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: $color-main;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border-radius: 50%;
+    border: 2px solid $color-main;
+    font-size: 20px;
+    color: $color-main;
+  }
+
+  &__empty-btn {
+    border-radius: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 16px;
+    padding: 8px;
+    border-width: 0;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__sum{
+align-self: flex-end;
+  }
+
+  &__item-price {
+    grid-area: price;
+    justify-self: end;
+  }
+
+  &__empty{
+    display: block;
+
+    &_hidden{
+      display: none;
+    }
+  }
+
+  &__contact{
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "0",
+    "name": "Oculus Meta Quest 2",
+    "price": 399.99,
+    "image": "images/oculus.webp"
+  },
+  {
+    "id": "1",
+    "name": "Meta Quest 2 Carrying Case",
+    "price": 59.99,
+    "image": "images/accessories-1.webp"
+  },
+  {
+    "id": "2",
+    "name": "Link Cable",
+    "price": 79.99,
+    "image": "images/accessories-2.webp"
+  },
+  {
+    "id": "3",
+    "name": "Meta Quest 2 Active Pack",
+    "price": 69.99,
+    "image": "images/accessories-3.webp"
+  },
+  {
+    "id": "4",
+    "name": "Meta Quest Gift Cards",
+    "price": 60,
+    "image": "images/accessories-4.webp"
+  }
+
+]

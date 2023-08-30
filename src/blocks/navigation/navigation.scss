@@ -58,30 +58,37 @@
     align-items: center;
     height: 42px;
 
-    @media (max-width: $screen-l) {
-      margin: 0;
-    }
-
     &_header {
       margin-left: 50px;
+
+      @media (max-width: $screen-l) {
+        margin: 0;
+      }
     }
 
     &_footer {
       margin-right: 50px;
+
+      @media (max-width: $screen-l) {
+        margin: 0;
+      }
     }
   }
 
-  &__basket-link{
+  &__cart-btn{
     position: relative;
     justify-self: end;
     height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 
-  &__basket-number {
+  &__cart-number {
     display: none;
   }
 
-  &__basket-number_on{
+  &__cart-number_on{
     position: absolute;
     display: flex;
     width: 15px;

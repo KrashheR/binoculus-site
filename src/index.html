@@ -28,10 +28,30 @@
         <a class="navigation__logo-link navigation__logo-link_header" href="#" aria-label="Go to the main page">
           <img class="navigation__logo-image" src="images/logo.svg" alt="logo icon">
         </a>
-        <a class="navigation__basket-link " href="#">
-          <img class="navigation__basket-logo" src="images/basket.svg" alt="basket icon">
-          <span class="navigation__basket-number">0</span>
-        </a>
+        <button class="navigation__cart-btn cart__open-btn" aria-label="open cart">
+          <img class="navigation__cart-logo" src="images/cart.svg" alt="cart icon">
+        </button>
+        <div class="cart" id="cartPopup">
+          <div class="cart__content">
+              <h2 class="cart__title">Your Shopping Cart</h2>
+              <button class="cart__close-btn">X</button>
+              <ul class="cart__list">
+              </ul>
+              <label class="cart__empty">
+                <p>Your cart is empty right now :(</p>
+                <button class="cart__close-btn cart__empty-btn">Go to shopping</button>
+              </label>
+              <label class="cart__contact">
+                  <p>Enter your phone number and Your personal manager will contact you:</p>
+                  <input type="text" id="phoneNumber">
+              </label>
+              <label for="" class="cart__sum">
+                Total:
+                <output class="cart__sum-result"></output>
+              </label>
+
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -42,8 +62,8 @@
         <p class="top__subtitle">Get an Elite Strap free</p>
         <p class="top__text">For a limited time only, save $59.99 USD. Offer ends 1/19/24</p>
         <div class="purchase">
-          <button class="purchase__button purchase__button_text add-to-cart">BUY NOW</button>
-          <button class="purchase__button purchase__button_price">399,99 USD</button>
+          <button class="purchase__button purchase__button_text add-to-cart" data-product-id="0">BUY NOW</button>
+          <button class="purchase__button purchase__button_price add-to-cart" data-product-id="0">399,99 USD</button>
           <p class="purchase__text">Meta Quest 2 is for ages 13+</p>
         </div>
       </div>
@@ -171,15 +191,14 @@
             <a class="card__link" href="https://www.getsupernatural.com/" target="_blank">see more</a>
           </div>
         </div>
-
       </div>
     </section>
     <div class="buy">
       <p class="buy__bg">OCULUS</p>
-      <img class="buy__img" src="images/buy-bg.webp" alt="buy icon">
+      <img class="buy__img" src="images/oculus.webp" alt="buy icon">
       <div class="purchase buy__purchase">
-        <button class="purchase__button purchase__button_text add-to-cart">BUY NOW</button>
-        <button class="purchase__button purchase__button_price">399,99 USD</button>
+        <button class="purchase__button purchase__button_text add-to-cart" data-product-id="0">BUY NOW</button>
+        <button class="purchase__button purchase__button_price add-to-cart" data-product-id="0">399,99 USD</button>
         <p class="purchase__text">Meta Quest 2 is for ages 13+</p>
       </div>
     </div>
@@ -229,28 +248,28 @@
             <h3 class="card__title card__title_accessories">Meta Quest 2 Carrying Case</h3>
             <p class="card__text ">Protect your system at home or away.</p>
             <p class="card__price">$59.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <a class="card__link card__link_accessories add-to-cart" data-product-id="1" href="">BUY NOW</a>
           </div>
           <div class="accessories__card card">
             <img class="card__image" src="images/accessories-2.webp" alt="Link Cable image" >
             <h3 class="card__title card__title_accessories">Link Cable</h3>
             <p class="card__text ">Harness the power of your PC with this premium fiber-optic cable.</p>
             <p class="card__price">$79.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <a class="card__link card__link_accessories add-to-cart" data-product-id="2" href="">BUY NOW</a>
           </div>
           <div class="accessories__card card">
             <img class="card__image" src="images/accessories-3.webp" alt="Meta Quest 2 Active Pack image" >
             <h3 class="card__title card__title_accessories">Meta Quest 2 Active Pack</h3>
             <p class="card__text ">A wipeable facial interface, wrist straps, and knuckle straps.</p>
             <p class="card__price">$69.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <a class="card__link card__link_accessories add-to-cart" data-product-id="3" href="">BUY NOW</a>
           </div>
           <div class="accessories__card card">
             <img class="card__image" src="images/accessories-4.webp" alt="Meta Quest Gift Cards image" >
-            <h3 class="card__title card__title_accessories">Meta Quest Gift Cards</h3>
+            <h3 class="card__title card__title_accessories">Meta Quest Gift Card</h3>
             <p class="card__text ">Redeemable on 350+ games and apps.</p>
-            <p class="card__price">$15-50 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <p class="card__price">$60</p>
+            <a class="card__link card__link_accessories add-to-cart" data-product-id="4" href="">BUY NOW</a>
           </div>
         </div>
       </div>

@@ -83,7 +83,7 @@ function images() {
 }
 
 function fonts() {
-  return src('src/fonts/*.woff2')
+  return src('src/assets/fonts/*.woff2')
     .pipe(dest('dist/fonts'))
     .pipe(browserSync.reload({ stream: true }));
 }
@@ -97,7 +97,8 @@ function watchFiles() {
   gulp.watch(['src/**/*.scss'], css);
   gulp.watch(['src/**/*.js'], js);
   gulp.watch(['src/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}'], images);
-  gulp.watch(['src/fonts/*.woff2'], fonts);
+  gulp.watch(['src/assets/fonts/*.woff2'], fonts);
+  gulp.watch(['src/data/*.json'], jsonData);
 }
 
 function deployGhPages() {
@@ -105,7 +106,13 @@ function deployGhPages() {
     .pipe(ghPages());
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+function jsonData() {
+  return src('src/data/*.json')
+    .pipe(dest('dist/data'))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, jsonData));
 const watch = gulp.parallel(build, watchFiles, serve);
 const deploy = gulp.series(build, deployGhPages);
 

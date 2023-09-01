@@ -8,6 +8,7 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 5;
 
+
   &_visible{
     display: block;
   }
@@ -16,6 +17,7 @@
     margin: 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $border-color;
+    font-weight: 400;
   }
 
   &__content {
@@ -24,7 +26,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 500px;
+    max-width: 640px;
     border-radius: 20px;
     padding: 20px;
     background: #fff;
@@ -41,14 +43,14 @@
     grid-template-columns: 1fr 2fr 1fr 1fr;
     align-items: center;
     justify-items: start;
-    padding: 10px 0;
+    padding: 20px;
     grid-gap: 10px;
   }
 
   &__item-img {
     grid-area: img;
-    height: 40px;
-    width: 40px;
+    width: 80px;
+    height: 60px;
     object-fit: cover;
   }
 
@@ -70,7 +72,8 @@
     border-radius: 5px;
     font-size: 20px;
     color: $color-main;
-    width: 25px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     cursor: pointer;
   }
@@ -84,16 +87,18 @@
     border: 2px solid $color-main;
     font-size: 20px;
     color: $color-main;
+    cursor: pointer;
   }
 
   &__empty-btn {
     border-radius: 20px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    position: relative;
+    top: 0;
+    right: 0;
     font-size: 16px;
     padding: 8px;
     border-width: 0;
+    max-width: 200px;
     background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
     border-color: transparent;
     color: #fff;
@@ -101,7 +106,7 @@
   }
 
   &__sum{
-align-self: flex-end;
+    align-self: flex-end;
   }
 
   &__item-price {
@@ -110,7 +115,9 @@ align-self: flex-end;
   }
 
   &__empty{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     &_hidden{
       display: none;

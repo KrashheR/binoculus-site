@@ -16,24 +16,29 @@ function initCartOpenBtn() {
 }
 
 function initCartCloseBtn() {
-  const cartCloseBtns = document.querySelectorAll(".cart__close-btn");
-  cartCloseBtns.forEach((cartCloseBtn) => {
-    cartCloseBtn.addEventListener("click", handleCartState);
+  const cart = document.querySelector(".cart");
+  cart.addEventListener("click", (event) => {
+    if (event.target.classList.contains("cart__close-btn")) {
+      handleCartState();
+    }
   });
 }
 
 function updateCartDisplay(cartItems) {
+  const empty = document.querySelector(".cart__empty");
+  const sum = document.querySelector(".cart__sum");
+
   if (cartItems.length !== 0) {
-    const empty = document.querySelector(".cart__empty");
     empty.style.display = "none";
+    sum.style.display = "block";
   } else {
-    const empty = document.querySelector(".cart__empty");
-    empty.style.display = "block";
+    empty.style.display = "flex";
+    sum.style.display = "none";
   }
 
   const cartList = document.querySelector(".cart__list");
   cartList.innerHTML = "";
-  let sum = 0;
+  let totalSum = 0;
 
   cartItems.forEach((item) => {
     const listItem = document.createElement("li");
@@ -50,23 +55,23 @@ function updateCartDisplay(cartItems) {
       </span>
       <span class="cart__item-price">$${item.price}</span>
     `;
-    sum += item.price * item.quantity;
+    totalSum += item.price * item.quantity;
     cartList.append(listItem);
   });
 
   const sumResult = document.querySelector(".cart__sum-result");
-  sumResult.innerHTML=`$${sum.toFixed(2)}`;
+  sumResult.innerHTML = `$${totalSum.toFixed(2)}`;
 }
 
 function initQuantityButtons() {
   const cartList = document.querySelector(".cart__list");
 
-  cartList.addEventListener("click", function(event) {
+  cartList.addEventListener("click", (event) => {
+    const productId = event.target.closest(".cart__item").dataset.productId;
+
     if (event.target.classList.contains("cart__quantity-button_plus")) {
-      const productId = event.target.closest(".cart__item").dataset.productId;
       updateCartItemQuantity(productId, 1);
     } else if (event.target.classList.contains("cart__quantity-button_minus")) {
-      const productId = event.target.closest(".cart__item").dataset.productId;
       updateCartItemQuantity(productId, -1);
     }
   });
@@ -75,15 +80,14 @@ function initQuantityButtons() {
 function updateCartItemQuantity(productId, delta) {
   const product = cartItems.find(item => item.id === productId);
 
-  if (product) {
-    product.quantity += delta;
+  if (!product) return;
 
-    if (product.quantity <= 0) {
-      const productIndex = cartItems.indexOf(product);
-      cartItems.splice(productIndex, 1);
-    }
+  product.quantity += delta;
 
-    updateCartDisplay(cartItems);
+  if (product.quantity <= 0) {
+    const productIndex = cartItems.indexOf(product);
+    cartItems.splice(productIndex, 1);
   }
-}
 
+  updateCartDisplay(cartItems);
+}

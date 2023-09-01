@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  height: 79px;
+  height: 70px;
 
   &__list{
     display: flex;
@@ -56,22 +56,11 @@
     display: flex;
     position: relative;
     align-items: center;
+    justify-self: center;
     height: 42px;
-
-    &_header {
-      margin-left: 50px;
-
-      @media (max-width: $screen-l) {
-        margin: 0;
-      }
-    }
 
     &_footer {
       margin-right: 50px;
-
-      @media (max-width: $screen-l) {
-        margin: 0;
-      }
     }
   }
 

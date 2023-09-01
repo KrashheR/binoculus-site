@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Helvetica', sans-serif;
-  src: url(../fonts/helvetica.woff2);
+  font-family: 'Montserrat', sans-serif;
+  src: url(../fonts/Montserrat.woff2);
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Helvetica-Bold', sans-serif;
-  src: url(../fonts/helvetica-bold.woff2);
+  font-family: 'Montserrat-Bold', sans-serif;
+  src: url(../fonts/Montserrat-Bold.woff2);
   font-style: normal;
   font-family: 700;
 }
@@ -15,8 +15,6 @@
 html{
   box-sizing: border-box;
 }
-
-
 
 *,
 *::after,

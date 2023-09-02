@@ -32,7 +32,7 @@
   }
 
   &__box-item {
-    
+
     @media (max-width: $screen-xl) {
       max-width: 400px;
       justify-self: center;
@@ -48,7 +48,6 @@
   }
 
   &__box-img {
-    margin-bottom: 9px;
 
     @media (max-width: $screen-xl) {
       height: 100%;

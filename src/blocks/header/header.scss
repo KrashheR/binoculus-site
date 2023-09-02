@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid $border-color;
   background-color: $header-bg-color;
+  z-index: 10;
 }

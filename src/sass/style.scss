@@ -16,8 +16,6 @@ html{
   box-sizing: border-box;
 }
 
-
-
 *,
 *::after,
 *::before {
@@ -35,6 +33,11 @@ li {
 
 img {
   max-width: 100%;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 p, h1, h2, h3 {

@@ -8,7 +8,7 @@ fetch("data/products.json")
   })
   .catch((error) => console.error("Error loading products:", error));
 
-document.querySelectorAll(".add-to-cart").forEach((button) => {
+document.querySelectorAll(".buy-button").forEach((button) => {
   button.addEventListener("click", function (event) {
     event.preventDefault();
 

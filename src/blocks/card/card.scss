@@ -1,8 +1,9 @@
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: 1px solid transparent;
-  border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
+  border-image: $border-gradient 1;
 
   &__image {
     margin-bottom: 10px;
@@ -13,8 +14,8 @@
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
-    color: $black-text-color;
-    
+    color: $text-gradient;
+
     &_accessories {
       min-height: 55px;
     }
@@ -24,11 +25,21 @@
     margin-bottom: 30px;
   }
 
-  &__link {
+  &__button {
     margin-top: auto;
-    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: $button-gradient;
+    height: 30px;
+    width: 200px;
+
+    &:hover{
+      background: $button-gradient-hover;
+      transform: scale3d(1.02, 1.02, 1);
+    }
+
+    &:active{
+      background: $button-gradient;
+      transform: scale3d(0.95, 0.95, 1);
+    }
 
     &_accessories {
       padding: 5px;
@@ -40,10 +51,5 @@
     }
   }
 
-  &__price {
-    color: $black-text-color;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+
 }

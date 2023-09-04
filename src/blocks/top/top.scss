@@ -1,6 +1,6 @@
 .top {
   min-height: calc(100vh - 70px);
-  background-image: url(../images/top-bg4.webp);
+  background-image: url(../images/top-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -64,6 +64,16 @@
       font-size: 14px;
       width: 200px;
       height: 45px;
+    }
+
+    &:hover{
+      background: $button-gradient-hover;
+      transform: scale3d(1.03, 1.03, 1);
+    }
+
+    &:active{
+      background: $button-gradient;
+      transform: scale3d(0.95, 0.95, 1);
     }
   }
 }

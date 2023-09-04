@@ -74,36 +74,48 @@
         </div>
         <div class="tabs">
           <div class="tabs__buttons">
-            <button class="tabs__buttons-item tabs__buttons-item_active" data-button="content-1">Графика</button>
-            <button class="tabs__buttons-item" data-button="content-2">Контроллеры</button>
-            <button class="tabs__buttons-item" data-button="content-3">Производительность</button>
-            <button class="tabs__buttons-item" data-button="content-4">Искусственный интеллект</button>
+            <button class="tabs__buttons-item tabs__buttons-item_active" data-button="content-graphics">Графика</button>
+            <button class="tabs__buttons-item" data-button="content-controllers">Контроллеры</button>
+            <button class="tabs__buttons-item" data-button="content-perfomance">Производительность</button>
+            <button class="tabs__buttons-item" data-button="content-ai">Искусственный интеллект</button>
           </div>
           <div class="tabs__content">
-            <div class="tabs__content-item tabs__content-item_active" id="content-1">
-              <img class="tabs__content-img" src="images/content-1.webp" alt="Graphics image">
+            <div class="tabs__content-item tabs__content-item_active" id="content-graphics">
+              <picture>
+                <source srcset="images/graphics-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/graphics.webp" alt="Graphics image author: https://www.behance.net/gallery/141223599/Metaverse-Freepik">
+              </picture>
               <div class="tabs__content-box">
                 <h3>Графика</h3>
                 <p>Binoculus предлагает 4K разрешение на каждый глаз, угол обзора 180° и плавную анимацию с 144 Гц, обеспечивая непревзойденное погружение в VR.</p>
                 <p>Оптимизированная цветовая палитра и технология HDR обеспечивают яркие, насыщенные и живые цвета, перенося вас в мир, где каждый оттенок имеет значение.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-2">
-              <img class="tabs__content-img" src="images/content-2.webp" alt="Controls image">
+            <div class="tabs__content-item" id="content-controllers">
+              <picture>
+                <source srcset="images/controllers-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/controllers.webp" alt="controllers image author: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove/modules/342255867">
+              </picture>
               <div class="tabs__content-box">
                 <h3>Контроллеры</h3>
                 <p>Контроллеры Binoculus: интуитивное управление с ультрачувствительным отслеживанием движений, адаптивной обратной связью и эргономичным дизайном для максимального комфорта в VR.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-3">
-              <img class="tabs__content-img" src="images/content-3.webp" alt="Processor image">
+            <div class="tabs__content-item" id="content-perfomance">
+              <picture>
+                <source srcset="images/perfomance-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/perfomance.webp" alt="Perfomance image">
+              </picture>
               <div class="tabs__content-box">
                 <h3>Производительность</h3>
                 <p>Мощный процессор для мгновенной реакции, оптимизированная графика для реалистичных сцен и эффективное охлаждение для продолжительных сессий в VR.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-4">
-              <img class="tabs__content-img" src="images/content-4.webp" alt="Play area image">
+            <div class="tabs__content-item" id="content-ai">
+              <picture>
+                <source srcset="images/ai-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/ai.webp" alt="Ai image author: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove?tracking_source=curated_galleries_list">
+              </picture>
               <div class="tabs__content-box">
                 <h3>Искусственный интеллект</h3>
                 <p>Адаптивная оптимизация графики, персонализированные рекомендации контента и система диалогов NPC-AI в играх делают каждый момент в VR уникальным и незабываемым.</p>
@@ -180,35 +192,35 @@
     <section class="accessories" id="accessories">
       <div class="container">
         <h2 class="section-title accessories__title">АКСЕССУАРЫ</h2>
-        <p class="accessories__text gradient-title">Personalize every experience</p>
+        <p class="accessories__text gradient-title">Полезные аксессуары для Binoculus</p>
         <div class="accessories__container">
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-1.webp" alt="Meta Quest 2 Carrying Case image" >
-            <h3 class="card__title card__title_accessories">Meta Quest 2 Carrying Case</h3>
-            <p class="card__text ">Protect your system at home or away.</p>
+            <img class="card__image" src="images/accessories-1.webp" alt="Binoculus Carrying Case image" >
+            <h3 class="card__title card__title_accessories">Binoculus защитный кейс</h3>
+            <p class="card__text ">Защитит очки от повреждений при переносе</p>
             <p class="card__price">$59.99 USD</p>
-            <a class="card__link card__link_accessories buy-button" data-product-id="1" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="1">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
             <img class="card__image" src="images/accessories-2.webp" alt="Link Cable image" >
-            <h3 class="card__title card__title_accessories">Link Cable</h3>
-            <p class="card__text ">Harness the power of your PC with this premium fiber-optic cable.</p>
+            <h3 class="card__title card__title_accessories">Binoculus премиум кабель</h3>
+            <p class="card__text ">Этот провод по-настоящему "геймерский", ведь имеет RGB подсветку</p>
             <p class="card__price">$79.99 USD</p>
-            <a class="card__link card__link_accessories buy-button" data-product-id="2" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="2">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-3.webp" alt="Meta Quest 2 Active Pack image" >
-            <h3 class="card__title card__title_accessories">Meta Quest 2 Active Pack</h3>
-            <p class="card__text ">A wipeable facial interface, wrist straps, and knuckle straps.</p>
+            <img class="card__image" src="images/accessories-3.webp" alt="Binoculus Active Pack image" >
+            <h3 class="card__title card__title_accessories">Binoculus комплект для активных игр</h3>
+            <p class="card__text ">Набор из всего необходимого для того, чтобы чувствовать себя уверенным во время активных игр</p>
             <p class="card__price">$69.99 USD</p>
-            <a class="card__link card__link_accessories buy-button" data-product-id="3" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="3">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-4.webp" alt="Meta Quest Gift Cards image" >
-            <h3 class="card__title card__title_accessories">Meta Quest Gift Card</h3>
-            <p class="card__text ">Redeemable on 350+ games and apps.</p>
+            <img class="card__image" src="images/accessories-4.webp" alt="Binoculus Gift Cards image" >
+            <h3 class="card__title card__title_accessories">Binoculus подарочная карта</h3>
+            <p class="card__text ">Подходит для оплаты игр в любых интернет магазинах</p>
             <p class="card__price">$60</p>
-            <a class="card__link card__link_accessories buy-button" data-product-id="4" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
         </div>
       </div>

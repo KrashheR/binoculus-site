@@ -1,4 +1,10 @@
 .socials {
+
+  &__image {
+    width: 30px;
+    height: 30px;
+  }
+
   @media (max-width: $screen-s) {
     order: -1;
   }

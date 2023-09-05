@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="binoculus, binoculus does exhist, binoculus games">
   <meta name="description" content="Это официальный сайт почти не выдуманных очков VR - Binoculus">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
   <title>Binoculus - VR нового поколения</title>
 </head>
@@ -50,7 +47,7 @@
                   <input type="text" id="phoneNumber">
               </label>
               <label class="cart__sum">
-                Total:
+                Всего:
                 <output class="cart__sum-result"></output>
               </label>
           </div>
@@ -135,7 +132,7 @@
           <div class="games__card card">
             <picture>
               <source srcset="images/noSkyMan-mobile.webp" media="(max-width: 652px)">
-              <img class="card__image" src="images/Sky.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
+              <img class="card__image" src="images/noSkyMan.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
             </picture>
             <h3 class="card__title">No sky, Man: Starfield</h3>
             <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов</p>
@@ -169,7 +166,7 @@
       <p class="buy__bg">BINOCULUS</p>
       <img class="buy__img" src="images/binoculus.webp" alt="buy icon">
       <button class="buy__button buy-button" data-product-id="0">ДОБАВИТЬ В КОРЗИНУ</button>
-      <p class="buy__text">Только сегодня скидка 30%</p>
+      <p class="buy__text">Успей заказать сегодня!</p>
     </div>
     <section class="equipment" id="equipment">
       <div class="container">
@@ -218,28 +215,40 @@
         <h3 class="accessories__title gradient-title">Полезные аксессуары для Binoculus</h3>
         <div class="accessories__container">
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-1.webp" alt="Binoculus Carrying Case image" >
+            <picture>
+              <source srcset="images/accessories-case-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-case.webp" alt="Binoculus фотография защитного кейса" >
+            </picture>
             <h3 class="card__title card__title_accessories">Binoculus защитный кейс</h3>
             <p class="card__text ">Защитит очки от повреждений при переносе</p>
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="1">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-2.webp" alt="Link Cable image" >
+            <picture>
+              <source srcset="images/accessories-cable-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-cabel.webp" alt="Фотография кабеля" >
+            </picture>
             <h3 class="card__title card__title_accessories">Binoculus премиум кабель</h3>
-            <p class="card__text ">Этот провод по-настоящему "геймерский", ведь имеет RGB подсветку</p>
+            <p class="card__text ">Благодаря высокой скорости передачи данных, игровой процесс пройдет без задержек</p>
             <p class="card__price">$79.99 USD</p>
             <button class="card__button buy-button" data-product-id="2">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-3.webp" alt="Binoculus Active Pack image" >
+            <picture>
+              <source srcset="images/accessories-pack-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-pack.webp" alt="Фотография комплекта для активных игр" >
+            </picture>
             <h3 class="card__title card__title_accessories">Binoculus комплект для активных игр</h3>
             <p class="card__text ">Набор из всего необходимого для того, чтобы чувствовать себя уверенным во время активных игр</p>
             <p class="card__price">$69.99 USD</p>
             <button class="card__button buy-button" data-product-id="3">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-4.webp" alt="Binoculus Gift Cards image" >
+            <picture>
+              <source srcset="images/accessories-card-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-card.webp" alt="Фотография подарочных карточек" >
+            </picture>
             <h3 class="card__title card__title_accessories">Binoculus подарочная карта</h3>
             <p class="card__text ">Подходит для оплаты игр в любых интернет магазинах</p>
             <p class="card__price">$60 USD</p>
@@ -287,18 +296,13 @@
         </a>
         <ul class="navigation__socials socials">
           <li class="socials__item">
-            <a href="#" class="socials__link" aria-label="Go to the YouTube channel">
-              <img src="images/youtube.svg" alt="YouTube channel icon">
+            <a href="https://t.me/IamKrashheR" target="_blank" class="socials__link" aria-label="Перейти в мой телеграм">
+              <img class="socials__image" src="images/telegram.svg" alt="Значок телеграмм">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link" aria-label="Go to the Facebook">
-              <img src="images/facebook.svg" alt="Facebook icon">
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link" aria-label="Go to the Instagram">
-              <img src="images/instagram.svg" alt="Instagram icon">
+            <a href="https://github.com/KrashheR" target="_blank" class="socials__link" aria-label="Перейти в гитхаб">
+              <img class="socials__image" src="images/github.svg" alt="Значок гитхаб">
             </a>
           </li>
         </ul>

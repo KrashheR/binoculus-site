@@ -29,7 +29,8 @@
     max-width: 640px;
     border-radius: 20px;
     padding: 20px;
-    background: #fff;
+    background: $main-gradient;
+    border: 2px solid $color-main;
   }
 
   &__list{
@@ -71,7 +72,9 @@
     border: none;
     border-radius: 5px;
     font-size: 20px;
-    color: $color-main;
+    background-color: transparent;
+    border: 2px solid $cart-button-color;
+    color: $cart-button-color;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -99,9 +102,10 @@
     padding: 8px;
     border-width: 0;
     max-width: 200px;
-    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    font-weight: 700;
+    background: $button-gradient;
     border-color: transparent;
-    color: #fff;
+    color: $black-text-color;
     text-transform: uppercase;
   }
 

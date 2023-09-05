@@ -31,31 +31,28 @@
             <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
-        <a class="navigation__logo-link navigation__logo-link_header" href="#" aria-label="Go to the main page">
-          <img class="navigation__logo-image" src="images/logo.svg" alt="logo icon">
-        </a>
         <button class="navigation__cart-btn cart__open-btn" aria-label="open cart">
           <img class="navigation__cart-logo" src="images/cart.svg" alt="cart icon">
+          <p class="navigation__cart-number"></p>
         </button>
         <div class="cart" id="cartPopup">
           <div class="cart__content">
-            <h3 class="cart__title">Your Shopping Cart</h3>
+            <h3 class="cart__title">Ваша корзина</h3>
               <button class="cart__close-btn">X</button>
               <ul class="cart__list">
               </ul>
               <label class="cart__empty">
-                <p>Your cart is empty right now :(</p>
-                <button class="cart__close-btn cart__empty-btn">Go to shopping</button>
+                <p>Ваша корзина сейчас пуста :(</p>
+                <button class="cart__close-btn cart__empty-btn">За покупками!</button>
               </label>
               <label class="cart__contact">
-                  <p>Enter your phone number and Your personal manager will contact you:</p>
+                  <p>Укажите ваш номер телефона и наш менеджер свяжется с Вами!</p>
                   <input type="text" id="phoneNumber">
               </label>
               <label class="cart__sum">
                 Total:
                 <output class="cart__sum-result"></output>
               </label>
-
           </div>
         </div>
       </nav>
@@ -136,22 +133,33 @@
             ВСЕ НОВИНКИ ДОСТУПНЫ В VR
           </h3>
           <div class="games__card card">
-
-            <img class="card__image" src="images/game-1.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
+            <picture>
+              <source srcset="images/noSkyMan-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/Sky.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
+            </picture>
             <h3 class="card__title">No sky, Man: Starfield</h3>
             <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов</p>
+            <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="games__card card">
-            <img class="card__image" src="images/game-2.webp" alt="Population: One обложка выдуманной игры :)" >
+            <picture>
+              <source srcset="images/galdursBate-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/galdursBate.webp" alt="Galdur's Bate 3 обложка выдуманной игры :)" >
+            </picture>
             <h3 class="card__title">Galdur's Bate 3</h3>
             <p class="card__text">Почувствуйте себя в роли гоблинов или друдиов, защищая свою землю от странных путешественников с личинками в мозгу</p>
+            <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="6">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="games__card card">
-            <img class="card__image" src="images/ufc.webp" alt="Supernatural обложка выдуманной игры :)" >
-            <h3 class="card__title">UFC 5</h3>
+            <picture>
+              <source srcset="images/kfc-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/kfc.webp" alt="KFC 5 обложка выдуманной игры :)" >
+            </picture>
+            <h3 class="card__title">KFC 5</h3>
             <p class="card__text">Сразитесь против бойцов главного ММА промоушена мира с использованием новых адаптивных контроллеров Binoculus Touch</p>
+            <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="7">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
         </div>
@@ -184,7 +192,9 @@
             </picture>
             <p class="equipment__box-text">Два контроллера</p>
           </div>
-          <p class="equipment__box-item equipment__box-title gradient-title">Что в комплекте?</p>
+          <div class="equipment__box-item equipment__box-text">
+            <p class="equipment__box-title gradient-title">Что в комплекте?</p>
+          </div>
           <div class="equipment__box-item">
             <picture>
               <source srcset="images/charger-mobile.webp" media="(max-width: 652px)">
@@ -194,18 +204,18 @@
           </div>
           <div class="equipment__box-item">
             <picture>
-              <source srcset="images/protected-glass-mobile.webp" media="(max-width: 652px)">
-              <img class="equipment__box-img" src="images/protected-glass.webp" alt="Фотография защитного стекла">
+              <source srcset="images/protective-frame-mobile.webp" media="(max-width: 652px)">
+              <img class="equipment__box-img" src="images/protective-frame.webp" alt="Фотография защитной рамки">
             </picture>
-            <p class="equipment__box-text">Защитное стекло</p>
+            <p class="equipment__box-text">Защитная рамка для очков</p>
           </div>
         </div>
       </div>
     </section>
     <section class="accessories" id="accessories">
       <div class="container">
-        <h2 class="section-title accessories__title">АКСЕССУАРЫ</h2>
-        <p class="accessories__text gradient-title">Полезные аксессуары для Binoculus</p>
+        <h2 class="section-title">АКСЕССУАРЫ</h2>
+        <h3 class="accessories__title gradient-title">Полезные аксессуары для Binoculus</h3>
         <div class="accessories__container">
           <div class="accessories__card card">
             <img class="card__image" src="images/accessories-1.webp" alt="Binoculus Carrying Case image" >
@@ -240,18 +250,17 @@
     </section>
     <section class="contacts" id="contacts">
       <div class="container">
-        <h2 class="contacts__title">Get news and updates</h2>
+        <h2 class="contacts__title">Подпишитесь на обновления</h2>
         <div class="contacts__container">
           <div class="contacts__form">
             <form class="email-form">
               <input class="email-form__input" type="email" placeholder="E-mail">
-              <button class="email-form__button" type="submit">GO</button>
+              <button class="email-form__button" type="submit">Подписаться</button>
             </form>
-            <p class="contacts__text">By signing up you agree to receive updates and marketing messages (e.g. email, social, etc.) from Meta about Meta’s existing and future products and services.
-              <br>You may withdraw your consent and unsubscribe at any time by clicking the unsubscribe link included in our messages.
-              <br>Your subscription is subject to the Terms and Privacy Policy.</p>
+            <p class="contacts__text">Подписываясь, вы соглашаетесь получать обновления и маркетинговые сообщения
+              (например, по электронной почте, в социальных сетях и т.д.) от Binoculus о существующих и будущих продуктах и услугах Binoculus.</p>
           </div>
-          <a class="contacts__email" href="mailto:oculusshop@gmail.com">oculusshop@gmail.com</a>
+          <a class="contacts__email" href="mailto:nikita.kucherencko.ya@yandex.ru">nikita.kucherencko.ya@yandex.ru</a>
         </div>
       </div>
     </section>
@@ -261,13 +270,16 @@
       <nav class="navigation navigation_footer">
         <ul class="navigation__list navigation__list_footer">
           <li class="navigation__list-item">
-            <a href="#features" class="navigation__list-link">FEATURES</a>
+            <a href="#features" class="navigation__list-link">ОСОБЕННОСТИ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#games" class="navigation__list-link">GAMES</a>
+            <a href="#games" class="navigation__list-link">ИГРЫ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#accessories" class="navigation__list-link">ACCESSORIES</a>
+            <a href="#equipment" class="navigation__list-link">КОМПЛЕКТ</a>
+          </li>
+          <li class="navigation__list-item">
+            <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
         <a class="navigation__logo-link navigation__logo-link_footer" aria-label="Go to the main page" href="#">

@@ -27,18 +27,22 @@ function initCartCloseBtn() {
 function updateCartDisplay(cartItems) {
   const empty = document.querySelector(".cart__empty");
   const sum = document.querySelector(".cart__sum");
+  const cartNumber = document.querySelector(".navigation__cart-number");
 
   if (cartItems.length !== 0) {
     empty.style.display = "none";
     sum.style.display = "block";
+    cartNumber.classList.add("navigation__cart-number_on");
   } else {
     empty.style.display = "flex";
     sum.style.display = "none";
+    cartNumber.classList.remove("navigation__cart-number_on");
   }
 
   const cartList = document.querySelector(".cart__list");
   cartList.innerHTML = "";
   let totalSum = 0;
+  let totalNum = 0;
 
   cartItems.forEach((item) => {
     const listItem = document.createElement("li");
@@ -56,9 +60,11 @@ function updateCartDisplay(cartItems) {
       <span class="cart__item-price">$${item.price}</span>
     `;
     totalSum += item.price * item.quantity;
+    totalNum += item.quantity;
     cartList.append(listItem);
   });
 
+  cartNumber.textContent = totalNum;
   const sumResult = document.querySelector(".cart__sum-result");
   sumResult.innerHTML = `$${totalSum.toFixed(2)}`;
 }

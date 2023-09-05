@@ -1,11 +1,8 @@
 .accessories {
   margin-bottom: 100px;
 
-  &__text {
-    margin-bottom: 30px;
-  }
-
   &__title {
+    font-weight: 400;
     margin-bottom: 30px;
 
     @media (max-width: $screen-m) {
@@ -16,7 +13,7 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
+
     @media (max-width: $screen-l) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;

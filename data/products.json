@@ -1,0 +1,51 @@
+[
+  {
+    "id": "0",
+    "name": "Binoculus очки",
+    "price": 399.99,
+    "image": "images/binoculus.webp"
+  },
+  {
+    "id": "1",
+    "name": "Binoculus защитный кейс",
+    "price": 59.99,
+    "image": "images/accessories-case.webp"
+  },
+  {
+    "id": "2",
+    "name": "Binoculus премиум кабель",
+    "price": 79.99,
+    "image": "images/accessories-cable.webp"
+  },
+  {
+    "id": "3",
+    "name": "Binoculus комплект для активных игр",
+    "price": 69.99,
+    "image": "images/accessories-pack.webp"
+  },
+  {
+    "id": "4",
+    "name": "Binoculus подарочная карта",
+    "price": 29.99,
+    "image": "images/accessories-card.webp"
+  },
+  {
+    "id": "5",
+    "name": "No sky, Man: Starfield",
+    "price": 59.99,
+    "image": "images/noSkyMan.webp"
+  },
+  {
+    "id": "6",
+    "name": "Galdur's Bate 3",
+    "price": 59.99,
+    "image": "images/galdursBate.webp"
+  },
+  {
+    "id": "7",
+    "name": "KFC 5",
+    "price": 59.99,
+    "image": "images/kfc.webp"
+  }
+
+]

@@ -1,136 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="binoculus, binoculus does exhist, binoculus games">
+  <meta name="description" content="Это официальный сайт почти не выдуманных очков VR - Binoculus">
   <link href="css/style.min.css" rel="stylesheet">
-  <title>Oculus</title>
+  <title>Binoculus - VR нового поколения</title>
 </head>
 <body class="page">
   <header class="header">
-    <div class="inner">
+    <div class="container">
       <nav class="navigation">
         <button class="navigation__hamburger">&#9776;</button>
         <ul class="navigation__list">
           <li class="navigation__list-item">
-            <a href="#features" class="navigation__list-link">FEATURES</a>
+            <a href="#features" class="navigation__list-link">ОСОБЕННОСТИ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#games" class="navigation__list-link">GAMES</a>
+            <a href="#games" class="navigation__list-link">ИГРЫ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#accessories" class="navigation__list-link">ACCESSORIES</a>
+            <a href="#equipment" class="navigation__list-link">КОМПЛЕКТ</a>
+          </li>
+          <li class="navigation__list-item">
+            <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
-        <a class="navigation__logo-link navigation__logo-link_header" href="#">
-          <img class="navigation__logo-image" src="images/logo.svg" alt="">
-        </a>
-        <a class="navigation__basket-link " href="#">
-          <img class="navigation__basket-logo" src="images/basket.svg" alt="">
-          <span class="navigation__basket-number">0</span>
-        </a>
+        <button class="navigation__cart-btn cart__open-btn" aria-label="open cart">
+          <img class="navigation__cart-logo" src="images/cart.svg" alt="cart icon">
+          <p class="navigation__cart-number"></p>
+        </button>
+        <div class="cart" id="cartPopup">
+          <div class="cart__content">
+            <h3 class="cart__title">Ваша корзина</h3>
+              <button class="cart__close-btn">X</button>
+              <ul class="cart__list">
+              </ul>
+              <label class="cart__empty">
+                <p>Ваша корзина сейчас пуста :(</p>
+                <button class="cart__close-btn cart__empty-btn">За покупками!</button>
+              </label>
+              <label class="cart__contact">
+                  <p>Укажите ваш номер телефона и наш менеджер свяжется с Вами!</p>
+                  <input type="text" id="phoneNumber">
+              </label>
+              <label class="cart__sum">
+                Всего:
+                <output class="cart__sum-result"></output>
+              </label>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
   <main>
     <section class="top">
-      <div class="inner">
-        <h1 class="top__title">Meta Quest 2</h1>
-        <p class="top__subtitle">Get an Elite Strap free</p>
-        <p class="top__text">For a limited time only, save $59.99 USD. Offer ends 1/19/24</p>
-        <div class="purchase">
-          <button class="purchase__button purchase__button_text add-to-cart">BUY NOW</button>
-          <button class="purchase__button purchase__button_price">399,99 USD</button>
-          <p class="purchase__text">Meta Quest 2 is for ages 13+</p>
-        </div>
+      <div class="container">
+        <h1 class="top__title">BINOCULUS</h1>
+        <p class="top__text">Binoculus: Откройте новое измерение виртуальной реальности. Совершенство VR и интеллект AI в одних очках.</p>
+        <button class="top__button buy-button" data-product-id="0">ДОБАВИТЬ В КОРЗИНУ</button>
       </div>
     </section>
     <section class="features" id="features">
-      <div class="inner">
+      <div class="container">
         <div class="features__titles">
-          <h2 class="section-title">PRODUCT FEATURES</h2>
-          <h3 class="features__title gradient-title">Easy to set up and safe to use</h3>
+          <h2 class="section-title">ОСОБЕННОСТИ ПРОДУКТА</h2>
+          <h3 class="features__title gradient-title">Воплощение новейших технологий</h3>
         </div>
         <div class="tabs">
           <div class="tabs__buttons">
-            <button class="tabs__buttons-item tabs__buttons-item_active" data-button="content-1">01 Graphics</button>
-            <button class="tabs__buttons-item" data-button="content-2">02 Controls</button>
-            <button class="tabs__buttons-item" data-button="content-3">03 Processor</button>
-            <button class="tabs__buttons-item" data-button="content-4">04 Set up your play area</button>
-            <button class="tabs__buttons-item" data-button="content-5">05 Guardian activity</button>
-            <button class="tabs__buttons-item" data-button="content-6">06 Headset casting</button>
+            <button class="tabs__buttons-item tabs__buttons-item_active" data-button="content-graphics">Графика</button>
+            <button class="tabs__buttons-item" data-button="content-controllers">Контроллеры</button>
+            <button class="tabs__buttons-item" data-button="content-perfomance">Производительность</button>
+            <button class="tabs__buttons-item" data-button="content-ai">Искусственный интеллект</button>
           </div>
           <div class="tabs__content">
-            <div class="tabs__content-item tabs__content-item_active" id="content-1">
-              <img class="tabs__content-img" src="images/content-1.webp" alt="">
+            <div class="tabs__content-item tabs__content-item_active" id="content-graphics">
+              <picture>
+                <source srcset="images/graphics-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/graphics.webp" alt="Фотография графики в очках. Author: https://www.behance.net/gallery/141223599/Metaverse-Freepik">
+              </picture>
               <div class="tabs__content-box">
-                <h3>Graphics</h3>
-                <p>With 1832 x 1920 pixels per eye, everything from multiplayer games and productivity apps to 360 0 videos look beyond incredible</p>
-              </div>
-              <div class="video">
-                <img class="video__preview" src="images/content-bg-1.webp" alt="Watch the video">
-                <button class="video__button">
-                  <img class="video__play" src="images/play.svg" alt="">
-                </button>
-                <span class="video__text">Watch the video</span>
+                <h3>Графика</h3>
+                <p>Binoculus предлагает 4K разрешение на каждый глаз, угол обзора 180° и плавную анимацию с 144 Гц, обеспечивая непревзойденное погружение в VR.</p>
+                <p>Оптимизированная цветовая палитра и технология HDR обеспечивают яркие, насыщенные и живые цвета, перенося вас в мир, где каждый оттенок имеет значение.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-2">
-              <img class="tabs__content-img" src="images/content-2.webp" alt="">
+            <div class="tabs__content-item" id="content-controllers">
+              <picture>
+                <source srcset="images/controllers-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/controllers.webp" alt="Фотография контроллеров Author: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove/modules/342255867">
+              </picture>
               <div class="tabs__content-box">
-                <h3>Controls</h3>
-                <p>The Oculus Touch consists of a pair of handheld units, each featuring an analog stick, three buttons, and two triggers.</p>
-              </div>
-              <div class="video">
-                <img class="video__preview" src="images/content-bg-2.webp" alt="Watch the video">
-                <button class="video__button">
-                  <img class="video__play" src="images/play.svg" alt="">
-                </button>
-                <span class="video__text">Watch the video</span>
+                <h3>Контроллеры</h3>
+                <p>Контроллеры Binoculus: интуитивное управление с ультрачувствительным отслеживанием движений, адаптивной обратной связью и эргономичным дизайном для максимального комфорта в VR.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-3">
-              <img class="tabs__content-img" src="images/content-3.webp" alt="">
+            <div class="tabs__content-item" id="content-perfomance">
+              <picture>
+                <source srcset="images/perfomance-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/perfomance.webp" alt="Фотография процессора">
+              </picture>
               <div class="tabs__content-box">
-                <h3>Processor</h3>
-                <p>The Oculus Quest uses a Qualcomm Snapdragon 835 system-on-chip (SoC) with 4 GB of RAM. Three of the four 2.3 GHz CPU cores of the chip are reserved for software, while the remaining core and its four lower-power cores are reserved for motion tracking and other background functions.</p>
+                <h3>Производительность</h3>
+                <p>Мощный процессор для мгновенной реакции, оптимизированная графика для реалистичных сцен и эффективное охлаждение для продолжительных сессий в VR.</p>
               </div>
             </div>
-            <div class="tabs__content-item" id="content-4">
-              <img class="tabs__content-img" src="images/content-4.webp" alt="">
+            <div class="tabs__content-item" id="content-ai">
+              <picture>
+                <source srcset="images/ai-mobile.webp" media="(max-width: 652px)">
+                <img class="tabs__content-img" src="images/ai.webp" alt="Фотография ИИ Author: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove?tracking_source=curated_galleries_list">
+              </picture>
               <div class="tabs__content-box">
-                <h3>Set up your play area</h3>
-                <p>With 1832 x 1920 pixels per eye, everything from multiplayer games and productivity apps to 360 0 videos look beyond incredible</p>
-              </div>
-              <div class="video">
-                <img class="video__preview" src="images/content-bg-4.webp" alt="Watch the video">
-                <button class="video__button">
-                  <img class="video__play" src="images/play.svg" alt="">
-                </button>
-                <span class="video__text video__text_black">Watch the video</span>
-              </div>
-            </div>
-            <div class="tabs__content-item" id="content-5">
-              <img class="tabs__content-img" src="images/content-5.webp" alt="">
-              <div class="tabs__content-box">
-                <h3>Guardian activity</h3>
-                <p>For those brand new to the Oculus Quest 2, the headset allows you to draw the boundaries of your play area using the Touch motion controllers, thereby setting up the Guardian boundary system.
-                  <br>You can draw your boundary in any shape or size you like, though—much like with the original Oculus Quest—we recommend keeping things simple; basic, symmetrical shapes only.</p>
-              </div>
-            </div>
-            <div class="tabs__content-item" id="content-6">
-              <img class="tabs__content-img" src="images/content-6.webp" alt="">
-              <div class="tabs__content-box">
-                <h3>Headset casting</h3>
-                <p>With 1832 x 1920 pixels per eye, everything from multiplayer games and productivity apps to 360 0 videos look beyond incredible</p>
-              </div>
-              <div class="video">
-                <img class="video__preview" src="images/content-bg-6.webp" alt="Watch the video">
-                <button class="video__button">
-                  <img class="video__play" src="images/play.svg" alt="">
-                </button>
-                <span class="video__text video__text_black">Watch the video</span>
+                <h3>Искусственный интеллект</h3>
+                <p>Адаптивная оптимизация графики, персонализированные рекомендации контента и система диалогов NPC-AI в играх делают каждый момент в VR уникальным и незабываемым.</p>
               </div>
             </div>
           </div>
@@ -138,177 +123,189 @@
       </div>
     </section>
     <section class="games" id="games">
-      <div class="inner">
-        <h2 class="section-title games__title">GAMES</h2>
+      <div class="container">
+        <h2 class="section-title games__title">ИГРЫ</h2>
         <div class="games__grid-container">
-          <div class="games__description">
-            <h3 class="games__description-title gradient-title">
-              It’s all fun and games
-            </h3>
-            <p class="games__description-text">
-              Discover new adventures, master epic challenges or revisit classic moments in your favourite games and experiences
-            </p>
+          <h3 class="games__description-title gradient-title">
+            ВСЕ НОВИНКИ ДОСТУПНЫ В VR
+          </h3>
+          <div class="games__card card">
+            <picture>
+              <source srcset="images/noSkyMan-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/noSkyMan.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
+            </picture>
+            <h3 class="card__title">No sky, Man: Starfield</h3>
+            <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов</p>
+            <p class="card__price">$59.99 USD</p>
+            <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="games__card card">
-            <img class="card__image" src="images/game-1.webp" alt="" >
-            <h3 class="card__title">Blade & Sorcery: Nomad</h3>
-            <p class="card__text">Step into a medieval fantasy sandbox that uses phisics to serve up some of the most realistic combat in VR</p>
-            <a class="card__link" href="https://www.bladeandsorceryvr.com/blade-and-sorcery-nomad" target="_blank">see more</a>
+            <picture>
+              <source srcset="images/galdursBate-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/galdursBate.webp" alt="Galdur's Bate 3 обложка выдуманной игры :)" >
+            </picture>
+            <h3 class="card__title">Galdur's Bate 3</h3>
+            <p class="card__text">Почувствуйте себя в роли гоблинов или друдиов, защищая свою землю от странных путешественников с личинками в мозгу</p>
+            <p class="card__price">$59.99 USD</p>
+            <button class="card__button buy-button" data-product-id="6">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="games__card card">
-            <img class="card__image" src="images/game-2.webp" alt="" >
-            <h3 class="card__title">Population: One</h3>
-            <p class="card__text">Climb anything. Fight everywhere. Experience battle royale only possible in VR
-            </p>
-            <a class="card__link" href="https://store.steampowered.com/app/691260/POPULATION_ONE/" target="_blank">see more</a>
-          </div>
-          <div class="games__card card">
-            <img class="card__image" src="images/game-3.webp" alt="" >
-            <h3 class="card__title">Supernatural</h3>
-            <p class="card__text">Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world. Enjoy new workouts every day.</p>
-            <a class="card__link" href="https://www.getsupernatural.com/" target="_blank">see more</a>
+            <picture>
+              <source srcset="images/kfc-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/kfc.webp" alt="KFC 5 обложка выдуманной игры :)" >
+            </picture>
+            <h3 class="card__title">KFC 5</h3>
+            <p class="card__text">Сразитесь против бойцов главного ММА промоушена мира с использованием новых адаптивных контроллеров Binoculus Touch</p>
+            <p class="card__price">$59.99 USD</p>
+            <button class="card__button buy-button" data-product-id="7">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
         </div>
-
       </div>
     </section>
     <div class="buy">
-      <p class="buy__bg">OCULUS</p>
-      <img class="buy__img" src="images/buy-bg.webp" alt="">
-      <div class="purchase buy__purchase">
-        <button class="purchase__button purchase__button_text add-to-cart">BUY NOW</button>
-        <button class="purchase__button purchase__button_price">399,99 USD</button>
-        <p class="purchase__text">Meta Quest 2 is for ages 13+</p>
-      </div>
+      <p class="buy__bg">BINOCULUS</p>
+      <img class="buy__img" src="images/binoculus.webp" alt="buy icon">
+      <button class="buy__button buy-button" data-product-id="0">ДОБАВИТЬ В КОРЗИНУ</button>
+      <p class="buy__text">Успей заказать сегодня!</p>
     </div>
-    <section class="equipment">
-      <div class="inner">
-        <h2 class="section-title equipment__title">IN THE BOX</h2>
+    <section class="equipment" id="equipment">
+      <div class="container">
+        <h2 class="section-title equipment__title">КОМПЛЕКТ</h2>
         <div class="equipment__box-item equipment__box-mobile">
-          <p class="equipment__box-title gradient-title">What's included</p>
+          <p class="equipment__box-title gradient-title">Что в комплекте?</p>
         </div>
         <div class="equipment__box">
           <div class="equipment__box-item equipment__box-item_big">
-            <img class="equipment__box-img" src="images/eq1.webp" alt="">
-            <p class="equipment__box-text">VR Headset</p>
+            <picture>
+              <source srcset="images/binoculus-equipment-mobile.webp" media="(max-width: 652px)">
+              <img class="equipment__box-img equipment__box-img_big" src="images/binoculus-equipment.webp" alt="Фото VR очков">
+            </picture>
+            <p class="equipment__box-text">VR очки</p>
           </div>
           <div class="equipment__box-item">
-            <img class="equipment__box-img" src="images/eq2.webp" alt="">
-            <p class="equipment__box-text">Two Touch Controllers & AA Batteries</p>
+            <picture>
+              <source srcset="images/controllers-mobile.webp" media="(max-width: 652px)">
+              <img class="equipment__box-img" src="images/controllers.webp" alt="Фотография контроллеров. Автор: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove/modules/342255867">
+            </picture>
+            <p class="equipment__box-text">Два контроллера</p>
           </div>
-          <div class="equipment__box-item equipment__box-pc">
-            <p class="equipment__box-title gradient-title">What's included</p>
+          <div class="equipment__box-item equipment__box-text">
+            <p class="equipment__box-title gradient-title">Что в комплекте?</p>
           </div>
           <div class="equipment__box-item">
-            <img class="equipment__box-img" src="images/eq3.webp" alt="">
-            <p class="equipment__box-text">Charging Cable & Power Adapter</p>
+            <picture>
+              <source srcset="images/charger-mobile.webp" media="(max-width: 652px)">
+              <img class="equipment__box-img" src="images/charger.webp" alt="Фотография зарядного кабеля и адаптера питания">
+            </picture>
+            <p class="equipment__box-text">Зарядный кабель и адаптер питания</p>
           </div>
           <div class="equipment__box-item">
-            <img class="equipment__box-img" src="images/eq4.webp" alt="">
-            <p class="equipment__box-text">Glasses Spacer</p>
+            <picture>
+              <source srcset="images/protective-frame-mobile.webp" media="(max-width: 652px)">
+              <img class="equipment__box-img" src="images/protective-frame.webp" alt="Фотография защитной рамки">
+            </picture>
+            <p class="equipment__box-text">Защитная рамка для очков</p>
           </div>
         </div>
       </div>
     </section>
-    <div class="promo">
-      <div class="inner">
-        <div class="promo__container">
-          <button class="promo__button">GO</button>
-        </div>
-      </div>
-    </div>
     <section class="accessories" id="accessories">
-      <div class="inner">
-        <h2 class="section-title accessories__title">ACCESSORIES</h2>
-        <p class="accessories__text gradient-title">Personalize every experience</p>
+      <div class="container">
+        <h2 class="section-title">АКСЕССУАРЫ</h2>
+        <h3 class="accessories__title gradient-title">Полезные аксессуары для Binoculus</h3>
         <div class="accessories__container">
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-1.webp" alt="" >
-            <h3 class="card__title card__title_accessories">Meta Quest 2 Carrying Case</h3>
-            <p class="card__text ">Protect your system at home or away.</p>
+            <picture>
+              <source srcset="images/accessories-case-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-case.webp" alt="Binoculus фотография защитного кейса" >
+            </picture>
+            <h3 class="card__title card__title_accessories">Binoculus защитный кейс</h3>
+            <p class="card__text ">Защитит очки от повреждений при переносе</p>
             <p class="card__price">$59.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="1">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-2.webp" alt="" >
-            <h3 class="card__title card__title_accessories">Link Cable</h3>
-            <p class="card__text ">Harness the power of your PC with this premium fiber-optic cable.</p>
+            <picture>
+              <source srcset="images/accessories-cable-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-cable.webp" alt="Фотография кабеля" >
+            </picture>
+            <h3 class="card__title card__title_accessories">Binoculus премиум кабель</h3>
+            <p class="card__text ">Благодаря высокой скорости передачи данных, игровой процесс пройдет без задержек</p>
             <p class="card__price">$79.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="2">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-3.webp" alt="" >
-            <h3 class="card__title card__title_accessories">Meta Quest 2 Active Pack</h3>
-            <p class="card__text ">A wipeable facial interface, wrist straps, and knuckle straps.</p>
+            <picture>
+              <source srcset="images/accessories-pack-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-pack.webp" alt="Фотография комплекта для активных игр" >
+            </picture>
+            <h3 class="card__title card__title_accessories">Binoculus комплект для активных игр</h3>
+            <p class="card__text ">Набор из всего необходимого для того, чтобы чувствовать себя уверенным во время активных игр</p>
             <p class="card__price">$69.99 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <button class="card__button buy-button" data-product-id="3">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
           <div class="accessories__card card">
-            <img class="card__image" src="images/accessories-4.webp" alt="" >
-            <h3 class="card__title card__title_accessories">Meta Quest Gift Cards</h3>
-            <p class="card__text ">Redeemable on 350+ games and apps.</p>
-            <p class="card__price">$15-50 USD</p>
-            <a class="card__link card__link_accessories add-to-cart" href="">BUY NOW</a>
+            <picture>
+              <source srcset="images/accessories-card-mobile.webp" media="(max-width: 652px)">
+              <img class="card__image" src="images/accessories-card.webp" alt="Фотография подарочных карточек" >
+            </picture>
+            <h3 class="card__title card__title_accessories">Binoculus подарочная карта</h3>
+            <p class="card__text ">Подходит для оплаты игр в любых интернет магазинах</p>
+            <p class="card__price">$60 USD</p>
+            <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
         </div>
       </div>
     </section>
     <section class="contacts" id="contacts">
-      <div class="inner">
-        <h2 class="contacts__title">Get news and updates</h2>
+      <div class="container">
+        <h2 class="contacts__title">Подпишитесь на обновления</h2>
         <div class="contacts__container">
           <div class="contacts__form">
             <form class="email-form">
-              <input class="email-form__input" type="text" placeholder="E-mail">
-              <button class="email-form__button" type="submit">GO</button>
+              <input class="email-form__input" type="email" placeholder="E-mail">
+              <button class="email-form__button" type="submit">Подписаться</button>
             </form>
-            <p class="contacts__text">By signing up you agree to receive updates and marketing messages (e.g. email, social, etc.) from Meta about Meta’s existing and future products and services.
-              <br>You may withdraw your consent and unsubscribe at any time by clicking the unsubscribe link included in our messages.
-              <br>Your subscription is subject to the Terms and Privacy Policy.</p>
+            <p class="contacts__text">Подписываясь, вы соглашаетесь получать обновления и маркетинговые сообщения
+              (например, по электронной почте, в социальных сетях и т.д.) от Binoculus о существующих и будущих продуктах и услугах Binoculus.</p>
           </div>
-          <a class="contacts__email" href="mailto:oculusshop@gmail.com">oculusshop@gmail.com</a>
+          <a class="contacts__email" href="mailto:nikita.kucherencko.ya@yandex.ru">nikita.kucherencko.ya@yandex.ru</a>
         </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="inner">
+    <div class="container">
       <nav class="navigation navigation_footer">
         <ul class="navigation__list navigation__list_footer">
           <li class="navigation__list-item">
-            <a href="#features" class="navigation__list-link">FEATURES</a>
+            <a href="#features" class="navigation__list-link">ОСОБЕННОСТИ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#games" class="navigation__list-link">GAMES</a>
+            <a href="#games" class="navigation__list-link">ИГРЫ</a>
           </li>
           <li class="navigation__list-item">
-            <a href="#accessories" class="navigation__list-link">ACCESSORIES</a>
+            <a href="#equipment" class="navigation__list-link">КОМПЛЕКТ</a>
+          </li>
+          <li class="navigation__list-item">
+            <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
-        <a class="navigation__logo-link navigation__logo-link_footer" href="#">
-          <img class="navigation__logo-image" src="images/logo.svg" alt="">
-        </a>
         <ul class="navigation__socials socials">
           <li class="socials__item">
-            <a href="#" class="socials__link">
-              <img src="images/youtube.svg" alt="">
+            <a href="https://t.me/IamKrashheR" target="_blank" class="socials__link" aria-label="Перейти в мой телеграм">
+              <img class="socials__image" src="images/telegram.svg" alt="Значок телеграмм">
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link">
-              <img src="images/facebook.svg" alt="">
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link">
-              <img src="images/instagram.svg" alt="">
+            <a href="https://github.com/KrashheR" target="_blank" class="socials__link" aria-label="Перейти в гитхаб">
+              <img class="socials__image" src="images/github.svg" alt="Значок гитхаб">
             </a>
           </li>
         </ul>
       </nav>
     </div>
   </footer>
-
   <script src="js/index.min.js"></script>
 </body>
 </html>

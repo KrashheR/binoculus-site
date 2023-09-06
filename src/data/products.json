@@ -1,33 +1,51 @@
 [
   {
     "id": "0",
-    "name": "Oculus Meta Quest 2",
+    "name": "Binoculus очки",
     "price": 399.99,
-    "image": "images/oculus.webp"
+    "image": "images/binoculus.webp"
   },
   {
     "id": "1",
-    "name": "Meta Quest 2 Carrying Case",
+    "name": "Binoculus защитный кейс",
     "price": 59.99,
-    "image": "images/accessories-1.webp"
+    "image": "images/accessories-case.webp"
   },
   {
     "id": "2",
-    "name": "Link Cable",
+    "name": "Binoculus премиум кабель",
     "price": 79.99,
-    "image": "images/accessories-2.webp"
+    "image": "images/accessories-cable.webp"
   },
   {
     "id": "3",
-    "name": "Meta Quest 2 Active Pack",
+    "name": "Binoculus комплект для активных игр",
     "price": 69.99,
-    "image": "images/accessories-3.webp"
+    "image": "images/accessories-pack.webp"
   },
   {
     "id": "4",
-    "name": "Meta Quest Gift Cards",
+    "name": "Binoculus подарочная карта",
     "price": 29.99,
-    "image": "images/accessories-4.webp"
+    "image": "images/accessories-card.webp"
+  },
+  {
+    "id": "5",
+    "name": "No sky, Man: Starfield",
+    "price": 59.99,
+    "image": "images/noSkyMan.webp"
+  },
+  {
+    "id": "6",
+    "name": "Galdur's Bate 3",
+    "price": 59.99,
+    "image": "images/galdursBate.webp"
+  },
+  {
+    "id": "7",
+    "name": "KFC 5",
+    "price": 59.99,
+    "image": "images/kfc.webp"
   }
 
 ]

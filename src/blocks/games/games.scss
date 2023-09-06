@@ -1,5 +1,5 @@
 .games {
-  margin-bottom: 100px;
+
 
   &__title {
     margin-bottom: 50px;
@@ -12,21 +12,6 @@
   &__description-title {
     margin-bottom: 10px;
     font-weight: 400;
-  }
-
-  &__description {
-    padding-right: 10px;
-
-    @media (max-width: $screen-m) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-
-  &__description-text {
-    line-height: 18px;
-    margin-bottom: 24px;
   }
 
   &__grid-container {

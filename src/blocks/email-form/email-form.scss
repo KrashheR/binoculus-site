@@ -6,33 +6,42 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid $border-color;
-    padding: 22px 70px 22px 0;
-  
+    padding: 22px;
+    font-size: 18px;
+
     &::placeholder {
-      font-family: 'Helvetica';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 18px;
-      color: $grey-text-color;
       margin: 0;
+      font-size: 18px;
+      color: $grey-text-color;
+    }
+
+    &:focus-visible{
+      outline: none;
     }
   }
 
   &__button {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: 100%;
     right: 0;
-    bottom: 5px;
-    border: none;
-    
-    border-radius: 50%;
-    background-color: $button-bg-color;
+    bottom: 0;
+    border: 1px solid $color-main;
+    background-color: $header-bg-color;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 16px;
-    color: $button-black-text-color;
+    color: $color-main;
     cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: $color-main;
+      color: $black-text-color;
+    }
+
+    &:active {
+      transform: scale3d(0.95, 0.95, 0.95);
+    }
   }
 }

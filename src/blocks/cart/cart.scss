@@ -91,6 +91,11 @@
     font-size: 20px;
     color: $color-main;
     cursor: pointer;
+
+    &:hover{
+      background-color: $color-main;
+      color: $black-text-color;
+    }
   }
 
   &__empty-btn {
@@ -107,6 +112,11 @@
     border-color: transparent;
     color: $black-text-color;
     text-transform: uppercase;
+    transition: all 0.4s ease;
+
+    &:active{
+      transform: scale3d(0.95, 0.95, 1);
+    }
   }
 
   &__sum{

@@ -6,26 +6,32 @@
   border: 1px solid transparent;
   border-image: $border-gradient 1;
 
+
   &__image {
-    width: 100%;
+    width: 250px;
     height: 220px;
     object-fit: cover;
   }
 
   &__title {
     font-size: 24px;
-    line-height: 28px;
     font-weight: 400;
-    color: $text-gradient;
+    color: $color-main;
+    text-align: center;
 
     &_accessories {
       min-height: 55px;
     }
   }
 
+  &__text {
+    color: $white-text-color;
+  }
+
   &__price {
     margin-top: auto;
     padding: 5px;
+    color: $white-text-color;
   }
 
   &__button {

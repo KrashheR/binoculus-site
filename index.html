@@ -28,28 +28,41 @@
             <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
-        <button class="navigation__cart-btn cart__open-btn" aria-label="open cart">
-          <img class="navigation__cart-logo" src="images/cart.svg" alt="cart icon">
+        <button class="navigation__cart-btn cart__open-btn" aria-label="Открыть корзину">
+          <img class="navigation__cart-logo" src="images/cart.svg" alt="Значок корзины">
           <p class="navigation__cart-number"></p>
         </button>
-        <div class="cart" id="cartPopup">
+        <div class="cart">
           <div class="cart__content">
             <h3 class="cart__title">Ваша корзина</h3>
               <button class="cart__close-btn">X</button>
               <ul class="cart__list">
               </ul>
-              <label class="cart__empty">
-                <p>Ваша корзина сейчас пуста :(</p>
+              <div class="cart__empty">
+                <p class="cart__empty-text">Ваша корзина сейчас пуста :(</p>
                 <button class="cart__close-btn cart__empty-btn">За покупками!</button>
-              </label>
-              <label class="cart__contact">
-                  <p>Укажите ваш номер телефона и наш менеджер свяжется с Вами!</p>
-                  <input type="text" id="phoneNumber">
-              </label>
-              <label class="cart__sum">
-                Всего:
+              </div>
+              <div class="cart__sum">
+                <p>Всего:</p>
                 <output class="cart__sum-result"></output>
-              </label>
+              </div>
+              <button class="cart__purchase" aria-label="Оформить заказ">Оформить заказ</button>
+          </div>
+        </div>
+        <form class="contact" id="contact-cart">
+          <div class="contact__content">
+            <button class="contact__close-btn" type="button">X</button>
+            <p class="contact__title">Укажите Ваш номер телефона и наш менеджер свяжется с Вами для оформления заказа!</p>
+            <div class="contact__input-container">
+              <input class="contact__phone" type="tel" id="phoneNumber" name="Поле ввода номера телефона" value="+7" required>
+              <button class="contact__button" aria-label="Заказать">Заказать звонок</button>
+            </div>
+          </div>
+        </form>
+        <div class="modal" id="modalCart">
+          <div class="modal__content">
+              <p class="modal__message"></p>
+              <button class="modal__button">Хорошо</button>
           </div>
         </div>
       </nav>
@@ -135,7 +148,7 @@
               <img class="card__image" src="images/noSkyMan.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
             </picture>
             <h3 class="card__title">No sky, Man: Starfield</h3>
-            <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов</p>
+            <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов.</p>
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -145,7 +158,7 @@
               <img class="card__image" src="images/galdursBate.webp" alt="Galdur's Bate 3 обложка выдуманной игры :)" >
             </picture>
             <h3 class="card__title">Galdur's Bate 3</h3>
-            <p class="card__text">Почувствуйте себя в роли гоблинов или друдиов, защищая свою землю от странных путешественников с личинками в мозгу</p>
+            <p class="card__text">Почувствуйте себя в роли гоблинов или друдиов, защищая свою землю от странных путешественников с личинками в мозгу.</p>
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="6">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -155,7 +168,7 @@
               <img class="card__image" src="images/kfc.webp" alt="KFC 5 обложка выдуманной игры :)" >
             </picture>
             <h3 class="card__title">KFC 5</h3>
-            <p class="card__text">Сразитесь против бойцов главного ММА промоушена мира с использованием новых адаптивных контроллеров Binoculus Touch</p>
+            <p class="card__text">Сразитесь против бойцов главного ММА промоушена мира с использованием новых адаптивных контроллеров Binoculus Touch.</p>
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="7">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -220,7 +233,7 @@
               <img class="card__image" src="images/accessories-case.webp" alt="Binoculus фотография защитного кейса" >
             </picture>
             <h3 class="card__title card__title_accessories">Binoculus защитный кейс</h3>
-            <p class="card__text ">Защитит очки от повреждений при переносе</p>
+            <p class="card__text ">Защитит Ваше устроство от повреждений при транспортировке.</p>
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="1">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -230,7 +243,7 @@
               <img class="card__image" src="images/accessories-cable.webp" alt="Фотография кабеля" >
             </picture>
             <h3 class="card__title card__title_accessories">Binoculus премиум кабель</h3>
-            <p class="card__text ">Благодаря высокой скорости передачи данных, игровой процесс пройдет без задержек</p>
+            <p class="card__text ">Благодаря высокой скорости передачи данных, игровой процесс пройдет без задержек.</p>
             <p class="card__price">$79.99 USD</p>
             <button class="card__button buy-button" data-product-id="2">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -240,7 +253,7 @@
               <img class="card__image" src="images/accessories-pack.webp" alt="Фотография комплекта для активных игр" >
             </picture>
             <h3 class="card__title card__title_accessories">Binoculus комплект для активных игр</h3>
-            <p class="card__text ">Набор из всего необходимого для того, чтобы чувствовать себя уверенным во время активных игр</p>
+            <p class="card__text ">Набор из всего необходимого для того, чтобы чувствовать себя уверенным во время активных игр.</p>
             <p class="card__price">$69.99 USD</p>
             <button class="card__button buy-button" data-product-id="3">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
@@ -250,26 +263,33 @@
               <img class="card__image" src="images/accessories-card.webp" alt="Фотография подарочных карточек" >
             </picture>
             <h3 class="card__title card__title_accessories">Binoculus подарочная карта</h3>
-            <p class="card__text ">Подходит для оплаты игр в любых интернет магазинах</p>
+            <p class="card__text ">Уникальная подарочная карта, подходящая для оплаты игр в любых интернет магазинах.</p>
             <p class="card__price">$60 USD</p>
             <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="contacts" id="contacts">
+    <section class="subscribe" id="subscribe">
       <div class="container">
-        <h2 class="contacts__title">Подпишитесь на обновления</h2>
-        <div class="contacts__container">
-          <div class="contacts__form">
+        <h2 class="subscribe__title">Подпишитесь на обновления</h2>
+        <div class="subscribe__container">
+          <div class="subscribe__form">
             <form class="email-form">
               <input class="email-form__input" type="email" placeholder="E-mail">
               <button class="email-form__button" type="submit">Подписаться</button>
             </form>
-            <p class="contacts__text">Подписываясь, вы соглашаетесь получать обновления и маркетинговые сообщения
+            <p class="subscribe__text">Подписываясь, вы соглашаетесь получать обновления и маркетинговые сообщения
               (например, по электронной почте, в социальных сетях и т.д.) от Binoculus о существующих и будущих продуктах и услугах Binoculus.</p>
           </div>
-          <a class="contacts__email" href="mailto:nikita.kucherencko.ya@yandex.ru">nikita.kucherencko.ya@yandex.ru</a>
+
+          <a class="subscribe__email" href="mailto:nikita.kucherencko.ya@yandex.ru">nikita.kucherencko.ya@yandex.ru</a>
+        </div>
+        <div class="modal" id="modalEmail">
+          <div class="modal__content">
+              <p class="modal__message">Вы успешно подписались на обновления!</p>
+              <button class="modal__button">Хорошо</button>
+          </div>
         </div>
       </div>
     </section>

@@ -8,12 +8,11 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 5;
 
-
-  &_visible{
+  &_visible {
     display: block;
   }
 
-  &__title{
+  &__title {
     margin: 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $border-color;
@@ -33,14 +32,13 @@
     border: 2px solid $color-main;
   }
 
-  &__list{
+  &__list {
     padding: 0;
   }
 
   &__item {
     display: grid;
-    grid-template-areas:
-      "img name quantity price";
+    grid-template-areas: "img name quantity price";
     grid-template-columns: 1fr 2fr 1fr 1fr;
     align-items: center;
     justify-items: start;
@@ -68,7 +66,7 @@
     gap: 10px;
   }
 
-  &__quantity-button{
+  &__quantity-button {
     border: none;
     border-radius: 5px;
     font-size: 20px;
@@ -92,9 +90,21 @@
     color: $color-main;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       background-color: $color-main;
       color: $black-text-color;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+
+    &_hidden {
+      display: none;
     }
   }
 
@@ -103,23 +113,26 @@
     position: relative;
     top: 0;
     right: 0;
-    font-size: 16px;
-    padding: 8px;
-    border-width: 0;
+    padding: 15px 20px;
     max-width: 200px;
+    border: 2px solid $color-main;
     font-weight: 700;
-    background: $button-gradient;
-    border-color: transparent;
-    color: $black-text-color;
+    background: transparent;
+    color: $color-main;
+    font-size: 16px;
     text-transform: uppercase;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 
-    &:active{
+    &:active {
       transform: scale3d(0.95, 0.95, 1);
     }
   }
 
-  &__sum{
+  &__empty-text {
+    font-size: 20px;
+  }
+
+  &__sum {
     align-self: flex-end;
   }
 
@@ -128,17 +141,7 @@
     justify-self: end;
   }
 
-  &__empty{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    &_hidden{
-      display: none;
-    }
-  }
-
-  &__contact{
+  &__contact {
     display: none;
   }
 }

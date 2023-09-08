@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCartOpenBtn();
   initCartCloseBtn();
   initQuantityButtons();
+  initCartPurchaseBtn();
   updateCartDisplay([]);
 });
 
@@ -24,18 +25,32 @@ function initCartCloseBtn() {
   });
 }
 
+function initCartPurchaseBtn() {
+  const cartPurchase = document.querySelector(".cart__purchase");
+  cartPurchase.addEventListener("click", handlePurchaseState);
+}
+
+function handlePurchaseState() {
+  const contactCart = document.querySelector("#contactCart");
+  contactCart.classList.toggle("contact_visible");
+  handleCartState();
+}
+
 function updateCartDisplay(cartItems) {
   const empty = document.querySelector(".cart__empty");
   const sum = document.querySelector(".cart__sum");
   const cartNumber = document.querySelector(".navigation__cart-number");
+  const cartPurchase = document.querySelector(".cart__purchase");
 
   if (cartItems.length !== 0) {
     empty.style.display = "none";
     sum.style.display = "block";
     cartNumber.classList.add("navigation__cart-number_on");
+    cartPurchase.style.display = "block";
   } else {
     empty.style.display = "flex";
     sum.style.display = "none";
+    cartPurchase.style.display = "none";
     cartNumber.classList.remove("navigation__cart-number_on");
   }
 

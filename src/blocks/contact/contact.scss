@@ -27,7 +27,7 @@
     border: 2px solid $color-main;
   }
 
-  &_visible{
+  &_visible {
     display: flex;
   }
 
@@ -40,18 +40,36 @@
   &__phone {
     font-size: 18px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 25px;
     border: none;
+    outline: none;
   }
 
   &__button {
     border: 2px solid $cart-button-color;
-    border-radius: 10px;
+    border-radius: 25px;
     text-align: center;
     font-size: 16px;
     padding: 5px 10px;
     background-color: transparent;
     color: $cart-button-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-main;
+      color: $black-text-color;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: $black-text-color;
+    border-radius: 50%;
+    border: 2px solid $color-main;
+    font-size: 20px;
+    color: $color-main;
     cursor: pointer;
 
     &:hover {

@@ -28,10 +28,10 @@
             <a href="#accessories" class="navigation__list-link">АКСЕССУАРЫ</a>
           </li>
         </ul>
-        <button class="navigation__cart-btn cart__open-btn" aria-label="Открыть корзину">
+        <a class="navigation__cart-btn cart__open-btn" aria-label="Открыть корзину">
           <img class="navigation__cart-logo" src="images/cart.svg" alt="Значок корзины">
           <p class="navigation__cart-number"></p>
-        </button>
+        </a>
         <div class="cart">
           <div class="cart__content">
             <h3 class="cart__title">Ваша корзина</h3>
@@ -47,18 +47,24 @@
                 <output class="cart__sum-result"></output>
               </div>
               <button class="cart__purchase" aria-label="Оформить заказ">Оформить заказ</button>
-
           </div>
         </div>
-        <form class="contact" id="contact-cart">
+        <form class="contact" id="contactCart">
           <div class="contact__content">
+            <button class="contact__close-btn" type="button">X</button>
             <p class="contact__title">Укажите Ваш номер телефона и наш менеджер свяжется с Вами для оформления заказа!</p>
             <div class="contact__input-container">
-              <input class="contact__phone" type="tel" id="phoneNumber" value="+7">
+              <input class="contact__phone" type="tel" id="phoneNumber" name="Поле ввода номера телефона" value="+7" required>
               <button class="contact__button" aria-label="Заказать">Заказать звонок</button>
             </div>
           </div>
         </form>
+        <div class="modal" id="modalCart">
+          <div class="modal__content">
+              <p class="modal__message"></p>
+              <button class="modal__button">Хорошо</button>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -132,11 +138,11 @@
     <section class="games" id="games">
       <div class="container">
         <h2 class="section-title games__title">ИГРЫ</h2>
-        <div class="games__grid-container">
-          <h3 class="games__description-title gradient-title">
+        <div class="games__grid-container" role="list">
+          <h3 class="games__description-title gradient-title" role="heading" aria-level="3">
             ВСЕ НОВИНКИ ДОСТУПНЫ В VR
           </h3>
-          <div class="games__card card">
+          <div class="games__card card" role="listitem">
             <picture>
               <source srcset="images/noSkyMan-mobile.webp" media="(max-width: 652px)">
               <img class="card__image" src="images/noSkyMan.webp" alt="No sky, Man: starfield обложка выдуманной игры :)" >
@@ -144,9 +150,9 @@
             <h3 class="card__title">No sky, Man: Starfield</h3>
             <p class="card__text">Садитесь за штурвал космического корабля и летите до ближайшей точки загрузки, осматривая всё вокруг на 360 градусов.</p>
             <p class="card__price">$59.99 USD</p>
-            <button class="card__button buy-button" data-product-id="5">ДОБАВИТЬ В КОРЗИНУ</button>
+            <button class="card__button buy-button" data-product-id="5" role="button">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
-          <div class="games__card card">
+          <div class="games__card card" role="listitem">
             <picture>
               <source srcset="images/galdursBate-mobile.webp" media="(max-width: 652px)">
               <img class="card__image" src="images/galdursBate.webp" alt="Galdur's Bate 3 обложка выдуманной игры :)" >
@@ -156,7 +162,7 @@
             <p class="card__price">$59.99 USD</p>
             <button class="card__button buy-button" data-product-id="6">ДОБАВИТЬ В КОРЗИНУ</button>
           </div>
-          <div class="games__card card">
+          <div class="games__card card" role="listitem">
             <picture>
               <source srcset="images/kfc-mobile.webp" media="(max-width: 652px)">
               <img class="card__image" src="images/kfc.webp" alt="KFC 5 обложка выдуманной игры :)" >
@@ -181,15 +187,15 @@
         <div class="equipment__box-item equipment__box-mobile">
           <p class="equipment__box-title gradient-title">Что в комплекте?</p>
         </div>
-        <div class="equipment__box">
-          <div class="equipment__box-item equipment__box-item_big">
+        <div class="equipment__box" role="list">
+          <div class="equipment__box-item equipment__box-item_big" role="listitem">
             <picture>
               <source srcset="images/binoculus-equipment-mobile.webp" media="(max-width: 652px)">
               <img class="equipment__box-img equipment__box-img_big" src="images/binoculus-equipment.webp" alt="Фото VR очков">
             </picture>
             <p class="equipment__box-text">VR очки</p>
           </div>
-          <div class="equipment__box-item">
+          <div class="equipment__box-item" role="listitem">
             <picture>
               <source srcset="images/controllers-mobile.webp" media="(max-width: 652px)">
               <img class="equipment__box-img" src="images/controllers.webp" alt="Фотография контроллеров. Автор: https://www.behance.net/gallery/58154731/Zerokey-VR-Glove/modules/342255867">
@@ -199,14 +205,14 @@
           <div class="equipment__box-item equipment__box-text">
             <p class="equipment__box-title gradient-title">Что в комплекте?</p>
           </div>
-          <div class="equipment__box-item">
+          <div class="equipment__box-item" role="listitem">
             <picture>
               <source srcset="images/charger-mobile.webp" media="(max-width: 652px)">
               <img class="equipment__box-img" src="images/charger.webp" alt="Фотография зарядного кабеля и адаптера питания">
             </picture>
             <p class="equipment__box-text">Зарядный кабель и адаптер питания</p>
           </div>
-          <div class="equipment__box-item">
+          <div class="equipment__box-item" role="listitem">
             <picture>
               <source srcset="images/protective-frame-mobile.webp" media="(max-width: 652px)">
               <img class="equipment__box-img" src="images/protective-frame.webp" alt="Фотография защитной рамки">
@@ -270,13 +276,20 @@
         <div class="subscribe__container">
           <div class="subscribe__form">
             <form class="email-form">
-              <input class="email-form__input" type="email" placeholder="E-mail">
-              <button class="email-form__button" type="submit">Подписаться</button>
+              <label for="email-input" class="visually-hidden">Введите ваш E-mail</label>
+              <input class="email-form__input" type="email" id="email-input" placeholder="E-mail" required>
+              <button class="email-form__button" type="submit" role="button">Подписаться</button>
             </form>
             <p class="subscribe__text">Подписываясь, вы соглашаетесь получать обновления и маркетинговые сообщения
               (например, по электронной почте, в социальных сетях и т.д.) от Binoculus о существующих и будущих продуктах и услугах Binoculus.</p>
           </div>
           <a class="subscribe__email" href="mailto:nikita.kucherencko.ya@yandex.ru">nikita.kucherencko.ya@yandex.ru</a>
+        </div>
+        <div class="modal" id="modalEmail">
+          <div class="modal__content">
+              <p class="modal__message">Вы успешно подписались на обновления!</p>
+              <button class="modal__button">Хорошо</button>
+          </div>
         </div>
       </div>
     </section>

@@ -28,21 +28,6 @@
 
   }
 
-  &__subtitle {
-    padding-top: 10px;
-    font-size: 36px;
-    line-height: 41px;
-
-    @media (max-width: $screen-m) {
-      font-size: 26px;
-      line-height: 30px;
-    }
-
-    @media (max-width: $screen-s) {
-      font-size: 22px;
-    }
-  }
-
   &__text {
     display: block;
     max-width: 500px;

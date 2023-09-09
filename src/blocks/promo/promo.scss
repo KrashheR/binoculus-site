@@ -43,6 +43,7 @@
 
   &__text{
     margin-top: 10px;
+    color: $white-text-color;
   }
 
   &__bg {
@@ -57,6 +58,11 @@
     -webkit-text-fill-color: transparent;
     z-index: -1;
     animation: line-text 6s linear 1s infinite;
+
+    @media (max-width: $screen-m) {
+      font-size: 250px;
+      height: auto;
+    }
   }
 }
 

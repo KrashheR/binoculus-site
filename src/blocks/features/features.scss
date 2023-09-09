@@ -5,21 +5,4 @@
     padding: 50px 0;
   }
 
-  &__titles {
-    display: flex;
-
-    @media (max-width: $screen-m) {
-      display: block;
-    }
-  }
-
-  &__title{
-    max-width: 330px;
-    margin: 0 0 2px 0;
-    font-weight: 400;
-
-    @media (max-width: $screen-m) {
-      margin: 20px 0 0 2px ;
-    }
-  }
 }

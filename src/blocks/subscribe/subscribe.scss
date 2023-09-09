@@ -1,19 +1,24 @@
 .subscribe {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    gap: 10px;
     border-right: 1px solid $border-color;
-    padding: 0 18px 0 0;
 
     @media (max-width: $screen-xl) {
       border: none;
     }
 
     @media (max-width: $screen-l) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: $screen-m) {
+      gap: 10px;
     }
   }
 
@@ -23,10 +28,14 @@
     font-size: 24px;
     line-height: 33px;
     color: $color-main;
+
+    @media (max-width: $screen-l) {
+      text-align: center;
+    }
   }
 
   &__form {
-    flex-basis: 600px;
+    max-width: 600px;
     position: relative;
 
   }
@@ -34,6 +43,7 @@
   &__text {
     font-size: 13px;
     margin-bottom: 10px;
+    color: $white-text-color;
   }
 }
 

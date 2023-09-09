@@ -1,4 +1,4 @@
-.buy {
+.promo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +52,7 @@
     font-size: 350px;
     line-height: 400px;
     background: $text-gradient;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: -1;

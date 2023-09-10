@@ -8,6 +8,10 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 5;
 
+  @media (max-width: $screen-m) {
+    font-size: 14px;
+  }
+
   &_visible {
     display: block;
   }
@@ -15,6 +19,10 @@
   &__title {
     margin: 0;
     font-weight: 400;
+
+    @media (max-width: $screen-m) {
+      margin: 10px;
+    }
   }
 
   &__content {
@@ -30,11 +38,34 @@
     padding: 30px;
     background: $main-gradient;
     border: 2px solid $color-main;
+
+    @media (max-width: $screen-m) {
+      width: 90%;
+      padding: 10px;
+    }
   }
 
   &__list {
     padding: 0;
     margin: 0;
+    overflow: auto;
+    max-height: 600px;
+
+    @media (max-width: $screen-l) {
+      max-height: 550px;
+    }
+
+    @media (max-width: $screen-m) {
+      max-height: 460px;
+    }
+
+    @media (max-width: $screen-s) {
+      max-height: 460px;
+    }
+
+    @media (max-width: $screen-ss) {
+      max-height: 300px;
+    }
   }
 
   &__item {
@@ -45,6 +76,20 @@
     justify-items: start;
     padding: 20px;
     grid-gap: 10px;
+
+    @media (max-width: $screen-m) {
+      grid-gap: 8px;
+      padding: 15px;
+    }
+
+    @media (max-width: $screen-s) {
+      grid-gap: 5px;
+      padding: 8px;
+    }
+
+    @media (max-width: $screen-ss) {
+      padding: 8px;
+    }
   }
 
   &__item-img {
@@ -52,11 +97,26 @@
     width: 80px;
     height: 60px;
     object-fit: cover;
+
+    @media (max-width: $screen-m) {
+      width: 60px;
+      height: 40px;
+    }
+
+    @media (max-width: $screen-s) {
+      width: 55px;
+      height: 45px;
+    }
   }
 
   &__item-name {
     grid-area: name;
     font-size: 16px;
+
+    @media (max-width: $screen-m) {
+      font-size: 14px;
+    }
+
   }
 
   &__item-quantity {
@@ -65,6 +125,19 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: $screen-m) {
+      gap: 8px;
+    }
+
+    @media (max-width: $screen-s) {
+      gap: 6px;
+    }
+  }
+
+  &__quantity-num {
+    width: 10px;
+    text-align: center;
   }
 
   &__quantity-button {
@@ -77,6 +150,18 @@
     background-color: transparent;
     color: $cart-button-color;
     cursor: pointer;
+
+    @media (max-width: $screen-m) {
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $screen-s) {
+      width: 22px;
+      height: 22px;
+      font-size: 12px;
+    }
 
     &:hover {
       background-color: $color-main;
@@ -115,6 +200,10 @@
   &__empty-text {
     margin-top: 20px;
     font-size: 18px;
+
+    @media (max-width: $screen-m) {
+      font-size: 16px;
+    }
   }
 
   &__empty-btn {
@@ -132,6 +221,11 @@
     text-transform: uppercase;
     transition: all 0.5s ease;
 
+    @media (max-width: $screen-m) {
+      padding: 8px 13px;
+      max-width: 200px;
+    }
+
     &:active {
       transform: scale3d(0.95, 0.95, 1);
     }
@@ -144,6 +238,11 @@
     text-align: end;
     font-weight: 700;
     font-size: 16px;
+
+    @media (max-width: $screen-m) {
+      font-size: 14px;
+      padding-right: 10px;
+    }
   }
 
   &__item-price {
@@ -161,6 +260,17 @@
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
+
+    @media (max-width: $screen-m) {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $screen-s) {
+      margin-top: 10px;
+      padding: 4px 8px;
+    }
 
     &:hover {
       background-color: $color-main;

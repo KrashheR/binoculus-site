@@ -46,5 +46,12 @@
     margin-bottom: 10px;
     color: $white-text-color;
   }
+
+  &__email {
+    @media (min-width: $screen-xl ){
+      padding-right: 10px;
+    }
+
+  }
 }
 

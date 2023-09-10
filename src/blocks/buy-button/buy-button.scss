@@ -9,13 +9,4 @@
   cursor: pointer;
   transition: all 0.4s ease;
   transform: scale3d(1, 1, 1);
-
-  &_price {
-    float: right;
-    color: $color-main;
-    background: transparent;
-    border: 1px solid transparent;
-    border-image: linear-gradient(to bottom right, #BC10D8, rgba(80, 0, 250, 0.93)) 1;
-  }
-
 }

@@ -6,8 +6,8 @@
     display: block;
   }
 
-  &__title{
-    margin-bottom: 20px;
+  &__title {
+    margin-bottom: 30px;
     font-weight: 400;
   }
 
@@ -82,8 +82,7 @@
   &__content-item {
     display: grid;
     position: absolute;
-    grid-template-columns: auto 280px;
-    grid-template-rows: auto 150px;
+    grid-template-columns: 2fr 1fr;
     gap: 40px;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
@@ -92,6 +91,10 @@
       position: relative;
       display: block;
       height: 0;
+    }
+
+    @media (max-width: $screen-xl) {
+      gap: 20px;
     }
 
     &_active {
@@ -106,13 +109,11 @@
   &__content-img {
     width: 580px;
     max-height: 300px;
-    grid-row: 1/-1;
-    align-self: stretch;
     object-fit: cover;
 
     @media (max-width: $screen-m) {
+      width: 580px;
       width: 100%;
-      object-fit: cover;
       margin-bottom: 6px;
     }
   }

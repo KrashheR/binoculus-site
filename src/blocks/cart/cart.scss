@@ -12,6 +12,10 @@
     font-size: 14px;
   }
 
+  @media (max-width: $screen-ss) {
+    font-size: 12px;
+  }
+
   &_visible {
     display: block;
   }
@@ -111,12 +115,6 @@
 
   &__item-name {
     grid-area: name;
-    font-size: 16px;
-
-    @media (max-width: $screen-m) {
-      font-size: 14px;
-    }
-
   }
 
   &__item-quantity {
@@ -132,6 +130,10 @@
 
     @media (max-width: $screen-s) {
       gap: 6px;
+    }
+
+    @media (max-width: $screen-ss) {
+      gap: 4px;
     }
   }
 
@@ -183,6 +185,12 @@
     &:hover {
       background-color: $color-main;
       color: $black-text-color;
+    }
+
+    @media (max-width: $screen-m) {
+      top: -10px;
+      right: -10px;
+      font-size: 18px;
     }
   }
 
@@ -237,10 +245,8 @@
     border-bottom: 1px solid $color-main;
     text-align: end;
     font-weight: 700;
-    font-size: 16px;
 
     @media (max-width: $screen-m) {
-      font-size: 14px;
       padding-right: 10px;
     }
   }
@@ -259,12 +265,10 @@
     color: $cart-button-color;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
 
     @media (max-width: $screen-m) {
       margin-top: 10px;
       padding: 5px 10px;
-      font-size: 14px;
     }
 
     @media (max-width: $screen-s) {

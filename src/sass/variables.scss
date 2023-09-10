@@ -1,10 +1,14 @@
 $color-main:                  #cff;
+
 $border-color:                #cff;
+
 $header-bg-color:             #07010a;
+
 $button-text-color:           #07010a;
 $button-black-text-color:     #5c5c5e;
 $button-bg-color:             #cacad6;
 $button-active-color:         #070707;
+
 $white-text-color:            #f6f4f5;
 $black-text-color:            #070707;
 $grey-text-color:             #cacad6;
@@ -15,12 +19,13 @@ $hamburger-text-color:        #cff;
 $cart-bg-color:             #07010a;
 $cart-button-color:         #cff;
 
-$main-gradient: linear-gradient(0deg, rgba(7,1,10,1) 0%, rgba(9,25,40,1) 100%);
+$main-gradient: linear-gradient(180deg, #0a1b2b 20%, rgb(5, 10, 12) 90%, rgba(11,43,54,1) 100%);
 $button-gradient: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(204,255,255,1) 83%);
 $button-gradient-hover: linear-gradient(180deg, rgba(214,255,255,1) 0%, rgba(193,255,255,1) 100%);
 $text-gradient: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(204,255,255,1) 83%);
 $border-gradient: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,255,255,1) 83%);
 
+$screen-ss:                340px;
 $screen-s:                 480px;
 $screen-m:                 652px;
 $screen-l:                 992px;

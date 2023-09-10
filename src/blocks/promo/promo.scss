@@ -30,18 +30,18 @@
       height: 45px;
     }
 
-    &:hover{
+    &:hover {
       background: $button-gradient-hover;
       transform: scale3d(1.03, 1.03, 1);
     }
 
-    &:active{
+    &:active {
       background: $button-gradient;
       transform: scale3d(0.95, 0.95, 1);
     }
   }
 
-  &__text{
+  &__text {
     margin-top: 10px;
     color: $white-text-color;
   }

@@ -1,10 +1,10 @@
-.navigation{
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
 
-  &__list{
+  &__list {
     display: flex;
     gap: 0 20px;
     padding: 0;
@@ -45,7 +45,7 @@
     position: relative;
     transition: all 0.5s ease;
 
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       top: 0;
@@ -57,7 +57,7 @@
       transition: all 0.5s ease;
     }
 
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -69,14 +69,14 @@
       transition: all 0.5s ease;
     }
 
-    &:hover{
+    &:hover {
       color: $black-text-color;
 
-      &::before{
+      &::before {
         width: 100%;
       }
 
-      &::after{
+      &::after {
         width: 100%;
       }
     }
@@ -105,7 +105,7 @@
     }
   }
 
-  &__cart-btn{
+  &__cart-btn {
     position: relative;
     justify-self: end;
     height: 24px;
@@ -130,7 +130,7 @@
     font-size: 13px;
   }
 
-  &__cart-number_on{
+  &__cart-number_on {
     display: inline-flex;
   }
 

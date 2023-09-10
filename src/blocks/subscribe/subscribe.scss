@@ -38,7 +38,6 @@
   &__form {
     max-width: 600px;
     position: relative;
-
   }
 
   &__text {
@@ -48,10 +47,8 @@
   }
 
   &__email {
-    @media (min-width: $screen-xl ){
+    @media (min-width: $screen-xl) {
       padding-right: 10px;
     }
-
   }
 }
-

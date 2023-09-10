@@ -163,7 +163,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $screen-s) {
+    @media (max-width: $screen-l) {
       flex-direction: column;
       height: auto;
     }

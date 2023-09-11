@@ -45,28 +45,36 @@
     position: relative;
     transition: all 0.5s ease;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0%;
-      height: 50%;
-      z-index: -1;
-      background-color: $color-main;
-      transition: all 0.5s ease;
+    @media (min-width: $screen-l){
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 50%;
+        z-index: -1;
+        background-color: $color-main;
+        transition: all 0.5s ease;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 50%;
+        z-index: -1;
+        background-color: $color-main;
+        transition: all 0.5s ease;
+      }
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 0%;
-      height: 50%;
-      z-index: -1;
-      background-color: $color-main;
-      transition: all 0.5s ease;
+    @media (max-width: $screen-l) {
+      &:hover {
+        background-color: $color-main;
+      }
     }
 
     &:hover {

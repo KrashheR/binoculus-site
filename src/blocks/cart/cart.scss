@@ -264,16 +264,22 @@
     border: 2px solid $cart-button-color;
     color: $cart-button-color;
     border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
 
     @media (max-width: $screen-m) {
       margin-top: 10px;
       padding: 5px 10px;
+      font-size: 14px;
     }
 
     @media (max-width: $screen-s) {
       margin-top: 10px;
       padding: 4px 8px;
+    }
+
+    @media (max-width: $screen-ss) {
+      font-size: 12px;
     }
 
     &:hover {

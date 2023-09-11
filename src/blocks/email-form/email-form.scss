@@ -55,6 +55,9 @@
 
     @media (max-width: $screen-s) {
       width: 40%;
+    }
+
+    @media (max-width: $screen-ss) {
       font-size: 10px;
     }
 
